@@ -6,16 +6,19 @@ public class Factory {
         Furniture twoFurniture = new Furniture("Table");
         Glass twoMaterial = new Glass();
 
-        System.out.printf("\nThe %s %s is not broken, and it is not burnt.", oneMaterial, oneFurniture);
+        System.out.printf("\nThe %s %s %s, and it %s.", oneMaterial, oneFurniture, oneMaterial.isBlunt(), oneMaterial.isFire());
         System.out.printf("\nThwacking the %s...", oneFurniture);
-        System.out.printf("\nThe %s %s %s, and it is not burnt", oneMaterial, oneFurniture, oneMaterial.isBlunt());
-        System.out.printf("\nSetting fire to the %s....", oneFurniture);
+        oneMaterial.setBlunt();
         System.out.printf("\nThe %s %s %s, and it %s", oneMaterial, oneFurniture, oneMaterial.isBlunt(), oneMaterial.isFire());
-
-        System.out.printf("\n\nThe %s %s is not broken, and it is not burnt.", twoMaterial, twoFurniture);
+        System.out.printf("\nSetting fire to the %s....", oneFurniture);
+        oneMaterial.setFire();
+        System.out.printf("\nThe %s %s %s, and it %s", oneMaterial, oneFurniture, oneMaterial.isBlunt(), oneMaterial.isFire());
+        System.out.printf("\n\nThe %s %s %s, and it %s.", twoMaterial, twoFurniture, twoMaterial.isBlunt(), twoMaterial.isFire());
         System.out.printf("\nThwacking the %s...", twoFurniture);
-        System.out.printf("\nThe %s %s %s, and it is not burnt", twoMaterial, twoFurniture, twoMaterial.isBlunt());
+        twoMaterial.setBlunt();
+        System.out.printf("\nThe %s %s %s, and it %s", twoMaterial, twoFurniture, twoMaterial.isBlunt(), twoMaterial.isFire());
         System.out.printf("\nSetting fire to the %s....", twoFurniture);
+        twoMaterial.setFire();
         System.out.printf("\nThe %s %s %s, and it %s", twoMaterial, twoFurniture, twoMaterial.isBlunt(), twoMaterial.isFire());
     }
 }

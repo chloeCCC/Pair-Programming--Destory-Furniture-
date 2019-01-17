@@ -1,11 +1,30 @@
 public class Material {
 
+    private boolean isBlunt = false;
+    private boolean isFire = false;
+
+    public void setBlunt() {
+        isBlunt = true;
+    }
+
+    public void setFire() {
+        isFire = true;
+    }
+
     public String isBlunt() {
-        return "is broken";
+        if (isBlunt) {
+            return "is broken";
+        } else {
+            return "is not broken";
+        }
     }
 
     public String isFire() {
-        return "is burned";
+        if (isFire) {
+            return "is burned";
+        } else {
+            return "is not burned";
+        }
     }
 
 }

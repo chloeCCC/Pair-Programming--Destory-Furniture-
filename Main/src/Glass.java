@@ -1,7 +1,5 @@
 public class Glass extends Material{
-    public String isFire() {
-        return "is not burned";
-    }
+    public void setFire() {}
 
     public String toString() {
         return "glass";
